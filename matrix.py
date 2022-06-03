@@ -39,7 +39,7 @@ pixel_array = array.array("I", [0 for _ in range(NUM_LEDS)])
 ############################################
 
 
-def updatePixel():  # dimming colors and updating state machine (state_mach)
+def update_pixel():  # dimming colors and updating state machine (state_mach)
     dimmer_array = array.array("I", [0 for _ in range(NUM_LEDS)])
     for ii, cc in enumerate(pixel_array):
         r = int(((cc >> 8) & 0xFF) * BRIGHTNESS)
